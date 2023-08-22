@@ -16,7 +16,7 @@ export const authorize = (requiredRoles: string[]) => {
       }
 
       // Verify token
-      const decoded: any = jwt.verify(token, 'your-secret-key');
+      const decoded: any = jwt.verify(token, jwtSecret);
 
       // Get user from the database
       const userRepository = getRepository(User);
